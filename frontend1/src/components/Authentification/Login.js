@@ -44,7 +44,7 @@ const Login = () => {
         <Button
         width="100%"
         style={{marginTop:'15px'}}
-        onChange={handleSubmit}
+        onClick={handleSubmit}
         backgroundColor="white" color="black" _hover={{backgroundColor:"#D0F9FD"}}
          >
         LOGIN

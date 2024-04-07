@@ -2,8 +2,15 @@ import {  Container,Box,Text,Tabs, TabList, TabPanels, Tab, TabPanel} from '@cha
 import React from 'react'
 import Login from '../components/Authentification/Login'
 import SignUp from '../components/Authentification/SignUp'
+import { useHistory } from "react-router";
+import { useEffect} from "react";
 
 const Homepage = () => {
+  const history = useHistory();
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("userInfo"));
+    if (user) history.push("/chats"); 
+  }, [history]);
 return(
     <Container maxW="xl" centerContent>
     <Box
