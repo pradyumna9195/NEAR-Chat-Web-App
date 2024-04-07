@@ -8,15 +8,13 @@ import ChatProvider from "./Context/ChatProvider";
 const root = createRoot(document.getElementById('root'));
 root.render(
     // <Router>
-<BrowserRouter>
-<ChatProvider>
-
-<ChakraProvider>
-<App />
-</ChakraProvider>
-
-</ChatProvider>
-</BrowserRouter>
+    <BrowserRouter>
+        <ChatProvider>
+            <ChakraProvider>
+            <App />
+            </ChakraProvider>
+        </ChatProvider>
+    </BrowserRouter>
 // </Router>
 );
 
