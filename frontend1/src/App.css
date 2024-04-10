@@ -27,3 +27,16 @@
   filter: blur(1.2px); /* Apply blur effect */
   z-index: -1; /* Ensure the blurred image stays behind the content */
 }
+
+::-webkit-scrollbar {
+  width: 0px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.281);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

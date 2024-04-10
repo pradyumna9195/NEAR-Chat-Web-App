@@ -4,12 +4,14 @@ import Login from '../components/Authentification/Login'
 import SignUp from '../components/Authentification/SignUp'
 import { useHistory } from "react-router";
 
-const Homepage = () => {
-  const history = useHistory(); 
-useEffect (() => {
-const user = JSON.parse(localStorage.getItem("userInfo"));
-if (user) history.push("/chats");
-}, [history]);
+    const Homepage = () => {
+      const history = useHistory(); 
+    useEffect (() => {
+      const user = JSON.parse(localStorage.getItem("userInfo"));
+      if (user && user.isAuthenticated){           // Add condition to check if user is authenticated
+        history.push("/chats");
+      }
+    }, [history]);
 
 return(
     <Container maxW="xl" centerContent>
