@@ -5,6 +5,7 @@ import ChatPage from './Pages/ChatPage';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <BrowserRouter>
         
@@ -13,6 +14,7 @@ function App() {
         
       </BrowserRouter>
     </div>
+    </BrowserRouter>
     
   );
 }
