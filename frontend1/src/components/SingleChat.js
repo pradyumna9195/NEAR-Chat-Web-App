@@ -39,6 +39,7 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
         `/api/message/${selectedChat._id}`,
         config
       );
+      console.log(data)
 
       // console.log(messages);
       setMessages(data);
@@ -59,32 +60,11 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
 
   console.log(messages);
 
-  
-
-  // useEffect(() => {
-  //   socket = io(ENDPOINT);
-  //   socket.emit("setup", user);
-  //   socket.on("connected", () => setSocketConnected(true));
-  //   // eslint-disable-next-line
-  // }, []);
-
   useEffect(() => {
     fetchMessages();
     // selectedChatCompare = selectedChat;
   }, [selectedChat]);
 
-  // useEffect(() => {
-  //   socket.on("message recieved", (newMessageRecieved) => {
-  //     if (
-  //       !selectedChatCompare || // if chat is not selected or doesn't match current chat
-  //       selectedChatCompare._id !== newMessageRecieved.chat._id
-  //     ) {
-  //       //give notification
-  //     } else {
-  //       setMessages([...messages, newMessageRecieved]);
-  //     }
-  //   });
-  // });
 
 
   const sendMessage = async(event) => {
@@ -97,6 +77,7 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
             Authorization: `Bearer ${user.token}`,
           },
         };
+        console.log(selectedChat._id)
         setNewMessage("");
         const { data } = await axios.post(
           "/api/message",
@@ -127,23 +108,6 @@ const SingleChat = ({fetchAgain, setFetchAgain}) => {
 
     const typingHandler = (e) => {
       setNewMessage(e.target.value);
-
-      // if (!socketConnected) return;
-
-      // if (!typing) {
-      //   setTyping(true);
-      //   socket.emit("typing", selectedChat._id);
-      // }
-      // let lastTypingTime = new Date().getTime();
-      // var timerLength = 3000;
-      // setTimeout(() => {
-      //   var timeNow = new Date().getTime();
-      //   var timeDiff = timeNow - lastTypingTime;
-      //   if (timeDiff >= timerLength && typing) {
-      //     socket.emit("stop typing", selectedChat._id);
-      //     setTyping(false);
-      //   }
-      // }, timerLength);
     };
 
 
