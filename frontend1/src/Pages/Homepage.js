@@ -25,7 +25,7 @@ return(
     w="100%"
     m="20% 0px 15px 0px"
     shadow="4px 7px 20px black">
-        <Text color="white" fontSize='4xl' fontFamily="DM Sans" align="center">NEAR CHAT</Text>
+        <Text color="white" fontSize='4xl' fontFamily="Montserrat" align="center">NEAR CHAT</Text>
     </Box>
     <Box
     d='flex'

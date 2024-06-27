@@ -128,7 +128,7 @@ const SideDrawer = () => {
                 </Button>
             </Tooltip>
 
-            <Text fontSize="2xl" fontFamily="Work sans" fontWeight="bold">
+            <Text fontSize="2xl" fontFamily="Montserrat" fontWeight="bold">
                 Near-Chat
             </Text>
             <div>
